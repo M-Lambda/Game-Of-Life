@@ -1,13 +1,13 @@
 <template>
   <a-layout id="gol" style="min-height: 100vh">
     <a-layout-sider v-model="collapsed" collapsible>
-      <div class="logo">
-        <nuxt-link to='/'>
-          <a-icon type="border-outer" />
-          <span>Game of Life</span>
-        </nuxt-link>
-      </div>
       <a-menu theme="dark" :default-selected-keys="['1']" mode="inline">
+        <a-menu-item class="logo" key='0'>
+          <nuxt-link to='/'>
+            <a-icon type="border-outer" />
+            <span>Game of Life</span>
+          </nuxt-link>
+        </a-menu-item>
         <a-menu-item key="1">
           <nuxt-link to='/info'>
             <a-icon type="info-circle" />
@@ -78,9 +78,9 @@ export default {
 <style>
 #gol .logo {
   height: 32px;
-  margin: 16px;
   font-size: 18px;
   font-weight: 600;
+  background: transparent !important;
 }
 #gol .logo a {
   color: white !important;
