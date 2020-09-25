@@ -132,7 +132,7 @@ export default {
           tempArr[i][j] = result;
         }
       }
-      // set new gridList content
+      
       for (let i = 0; i < this.width; i++) {
         for (let j = 0; j < this.height; j++) {
           this.setCell(i, j, tempArr[i][j]);
@@ -146,9 +146,7 @@ export default {
           for (let offsetY = -1; offsetY < 2; offsetY++) {
             let newX = posX + offsetX;
             let newY = posY + offsetY;
-            // check if offset is:
-            // on current cell, out of bounds and if isAlive
-            // for cell true
+            
             if (
               (offsetX != 0 || offsetY != 0) &&
               newX >= 0 &&
